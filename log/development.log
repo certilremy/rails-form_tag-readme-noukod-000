@@ -589,3 +589,20 @@ Processing by PostsController#create as HTML
   [1m[35m (2.8ms)[0m  commit transaction
 Redirected to http://165.227.31.156:41696/posts
 Completed 302 Found in 16ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/posts" for 190.115.182.31 at 2019-01-21 17:10:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 190.115.182.31 at 2019-01-21 17:15:47 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MkoRkgoIltlyGCAjyajHYo4VTPvat+XrqeG9P4UllvExRHkBDKJRJN487OTrvzhYbGK1XH0VzcTlEJY8ULKq9A==", "post"=>{"title"=>"Bigest hero", "description"=>"the biggedst hero is a designe mNS"}, "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bigest hero"], ["description", "the biggedst hero is a designe mNS"], ["created_at", "2019-01-21 17:15:47.366331"], ["updated_at", "2019-01-21 17:15:47.366331"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://165.227.31.156:41696/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
